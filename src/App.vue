@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Map Test</h1>
+    <b-container class="bv-example-row" fluid>
+      <b-row>
+          <b-col><Resturants/></b-col>
+          <b-col cols="10"	><MapLoader/></b-col>
+       </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MapLoader from './components/MapLoader.vue'
+import Resturants from './components/Resturants.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MapLoader,
+    Resturants
   }
 }
 </script>
@@ -24,5 +31,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  width:100%;
+}
+b-container {
+  width:100%;
 }
 </style>
